@@ -1,0 +1,19 @@
+import time
+
+def timer(seconds):
+    while seconds > 0:
+        print(f"Осталось времени: {seconds} секунд.")
+        time.sleep(1)
+        seconds -= 1
+    print("Время вышло! Яйца готовы.")
+
+def main():
+    try:
+        minutes = int(input("Введите время варки яиц в минутах: "))
+        seconds = minutes * 60
+        timer(seconds)
+    except ValueError:
+        print("Ошибка: Пожалуйста, введите число.")
+
+if __name__ == "__main__":
+    main()
